@@ -1,3 +1,4 @@
+import com.library.Member;
 import com.library.User;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -6,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        User user = new User();
-        System.out.println(user.id);
 
-        User user1 = new User("siddharth","banegulur");
-        System.out.println(user1.name);
-        System.out.println(user1.contactInfo);
+
+        User user1 = new Member("siddharth","banegulur",0);
+        System.out.println(user1.getName());
+        System.out.println(user1.getContactInfo());
+        user1.displayDashboard();
     }
 }
