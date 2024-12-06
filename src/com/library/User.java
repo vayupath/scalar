@@ -9,7 +9,7 @@ abstract public class User {
         return "1";
     }
     public User(){
-        this.userId = generateUniqueID()
+        this.userId = generateUniqueID();
     }
 
     public User(String name, String contactInfo){
