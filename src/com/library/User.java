@@ -1,11 +1,11 @@
 package com.library;
 
-abstract public class User {
+public abstract class User {
     private String name;
     private String userId;
     private String contactInfo;
 
-    public static String generateUniqueID() {
+    private static String generateUniqueID() {
         return "1";
     }
     public User(){
@@ -13,6 +13,7 @@ abstract public class User {
     }
 
     public User(String name, String contactInfo){
+        this.userId = generateUniqueID();
         this.name = name;
         this.contactInfo = contactInfo;
 
@@ -20,13 +21,13 @@ abstract public class User {
 
     public User(User user){
         this.name = user.name;
-        this.userId = user.userId;
+        this.userId = generateUniqueID();
         this.contactInfo = user.contactInfo;
 
     }
 
-    abstract public void displayDashboard();
-    abstract public boolean canBorrowBooks();
+     public abstract void displayDashboard();
+     public abstract boolean canBorrowBooks();
 
     public String getName() {
         return name;
