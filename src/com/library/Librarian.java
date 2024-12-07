@@ -30,4 +30,9 @@ public class Librarian extends User {
     public void returnBook() {
         System.out.println("Book Returned");
     }
+
+    @Override
+    public void assignBook() {
+        System.out.println("assigned books");
+    }
 }

@@ -13,8 +13,28 @@ public class TextBook extends Book {
 
     @Override
     public void displayBookDetails() {
+        System.out.print("Title :"+this.getTitle());
+        System.out.print("Author :"+this.getAuthor());
+        System.out.print("ISBN :"+this.getIsbn());
+        System.out.print("Edition :"+this.getEdition());
+        System.out.print("Subject : "+this.getSubject());
+        System.out.println("------------------------------------------------------------");
 
-        System.out.println("Edition"+this.edition);
-        System.out.println("Subject: "+this.subject);
+    }
+
+    public String getEdition() {
+        return edition;
+    }
+
+    public void setEdition(String edition) {
+        this.edition = edition;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 }

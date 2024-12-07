@@ -31,7 +31,7 @@ public class LibraryManagementSystem {
 
     }
 
-    public Book searchBook(String criteria,String type){
+    public Book searchBooks(String criteria,String type){
         for (Book book : bookInventory) {
             if (book.getTitle().equals(criteria) ||
                     book.getAuthor().equals(criteria) &&
@@ -44,4 +44,20 @@ public class LibraryManagementSystem {
 
     }
 
+    public void displayAllBooks(){
+        for (Book book : bookInventory) {
+            book.displayBookDetails();
+
+        }
+    }
+
+    public void displayRegisteredUsers (){
+        for (User user : registeredUsers) {
+            System.out.print("Name :"+user.getName());
+            System.out.print("Contact Info :"+user.getContactInfo());
+            System.out.println("");
+
+        }
+
+    }
 }

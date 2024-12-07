@@ -32,12 +32,12 @@ public abstract class Book implements Lendable{
     @Override
     public boolean lend(User user) {
         if (isAvailable && user.canBorrowBooks()){
-
+            user.assignBook();
             isAvailable = false;
             return true;
         }
         if (!user.canBorrowBooks()){
-            System.out.println("User"+user.getName()+"cannot borrow books");
+            System.out.println("User "+user.getName()+" cannot borrow books");
         }
         return false;
     }

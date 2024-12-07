@@ -27,6 +27,11 @@ public class Member extends User {
         borrowedBooksCount--;
     }
 
+    @Override
+    public void assignBook() {
+        borrowedBooksCount++;
+    }
+
     public int getBorrowedBooksCount() {
         return borrowedBooksCount;
     }
