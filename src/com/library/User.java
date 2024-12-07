@@ -5,8 +5,15 @@ public abstract class User {
     private String userId;
     private String contactInfo;
 
-    private static String generateUniqueID() {
-        return "1";
+    private static int totalUsers = 0;
+
+    public int getTotalUsers() {
+        return totalUsers;
+    }
+
+    protected final String generateUniqueID() {
+        totalUsers++;
+        return "User_" + totalUsers;
     }
     public User(){
         this.userId = generateUniqueID();
@@ -28,6 +35,7 @@ public abstract class User {
 
      public abstract void displayDashboard();
      public abstract boolean canBorrowBooks();
+     public abstract void returnBook();
 
     public String getName() {
         return name;
